@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; }
+    .container { width: 90%; max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 10px; }
+    h2 { color: #ff6600; }
+    .cart-summary { margin-bottom: 20px; }
+    .cart-summary table { width: 100%; border-collapse: collapse; }
+    .cart-summary th, .cart-summary td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .checkout-form label { display: block; margin-top: 10px; }
+    .checkout-form input, .checkout-form select { width: 100%; padding: 8px; margin-top: 5px; }
+    .btn { background: #ff6600; color: #fff; border: none; padding: 12px; width: 100%; margin-top: 20px; cursor: pointer; font-size: 16px; }
+    .btn:hover { background: #e65c00; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Checkout</h2>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Your Order</h3>
+      <table id="checkout-items">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p><strong>Total: Ksh <span id="checkout-total">0</span></strong></p>
+    </div>
+
+    <!-- Delivery & Payment Form -->
+    <form id="checkout-form" class="checkout-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" required>
+
+      <label for="phone">Phone (Mpesa):</label>
+      <input type="tel" id="phone" required>
+
+      <label for="county">County:</label>
+      <select id="county" required>
+        <option value="">Select your county</option>
+        <option value="Baringo">Baringo</option>
+        <option value="Bomet">Bomet</option>
+        <option value="Bungoma">Bungoma</option>
+        <option value="Busia">Busia</option>
+        <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+        <option value="Embu">Embu</option>
+        <option value="Garissa">Garissa</option>
+        <option value="Homa Bay">Homa Bay</option>
+        <option value="Isiolo">Isiolo</option>
+        <option value="Kajiado">Kajiado</option>
+        <option value="Kakamega">Kakamega</option>
+        <option value="Kericho">Kericho</option>
+        <option value="Kiambu">Kiambu</option>
+        <option value="Kilifi">Kilifi</option>
+        <option value="Kirinyaga">Kirinyaga</option>
+        <option value="Kisii">Kisii</option>
+        <option value="Kisumu">Kisumu</option>
+        <option value="Kitui">Kitui</option>
+        <option value="Kwale">Kwale</option>
+        <option value="Laikipia">Laikipia</option>
+        <option value="Lamu">Lamu</option>
+        <option value="Machakos">Machakos</option>
+        <option value="Makueni">Makueni</option>
+        <option value="Mandera">Mandera</option>
+        <option value="Marsabit">Marsabit</option>
+        <option value="Meru">Meru</option>
+        <option value="Migori">Migori</option>
+        <option value="Mombasa">Mombasa</option>
+        <option value="Murang'a">Murang'a</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nakuru">Nakuru</option>
+        <option value="Nandi">Nandi</option>
+        <option value="Narok">Narok</option>
+        <option value="Nyamira">Nyamira</option>
+        <option value="Nyandarua">Nyandarua</option>
+        <option value="Nyeri">Nyeri</option>
+        <option value="Samburu">Samburu</option>
+        <option value="Siaya">Siaya</option>
+        <option value="Taita Taveta">Taita Taveta</option>
+        <option value="Tana River">Tana River</option>
+        <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+        <option value="Trans Nzoia">Trans Nzoia</option>
+        <option value="Turkana">Turkana</option>
+        <option value="Uasin Gishu">Uasin Gishu</option>
+        <option value="Vihiga">Vihiga</option>
+        <option value="Wajir">Wajir</option>
+        <option value="West Pokot">West Pokot</option>
+      </select>
+
+      <label for="address">Delivery Address:</label>
+      <input type="text" id="address" required>
+
+      <button type="submit" class="btn">Place Order & Pay with Mpesa</button>
+    </form>
+  </div>
+
+  <script>
+    // Load cart items from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let tableBody = document.querySelector("#checkout-items tbody");
+    let total = 0;
+
+    cart.forEach(item => {
+      let row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.quantity}</td>
+        <td>Ksh ${item.price * item.quantity}</td>
+      `;
+      tableBody.appendChild(row);
+      total += item.price * item.quantity;
+    });
+
+    document.getElementById("checkout-total").textContent = total;
+
+    // Handle checkout submit
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Order placed successfully! Proceed with Mpesa payment.");
+      localStorage.removeItem("cart"); // clear cart after success
+      window.location.href = "order-success.html";
+    });
+  </script>
+</body>
+</html>

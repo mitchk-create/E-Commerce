@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #ff6600; /* Jumia/Kilimall orange */
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .cart-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cart-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+      background: #ff6600;
+      color: white;
+    }
+
+    table img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .quantity-input {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .remove-btn {
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background: darkred;
+    }
+
+    .cart-summary {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .cart-actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      background: #ff6600;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e65c00;
+    }
+
+    .empty {
+      text-align: center;
+      font-size: 18px;
+      color: #888;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🛒 My Shopping Cart</header>
+
+  <div class="cart-container">
+    <div class="cart-title">Your Items</div>
+
+    <table id="cart-table">
+      <thead>
+        <tr>
+         
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+
+    <div class="empty" id="empty-message">Your cart is empty 😢</div>
+
+    <div class="cart-summary" id="cart-summary"></div>
+
+    <div class="cart-actions">
+      <button class="btn" onclick="goHome()">⬅ Go Back Home</button>
+      <button class="btn" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartItemsContainer = document.getElementById("cart-items");
+      const emptyMessage = document.getElementById("empty-message");
+      const summary = document.getElementById("cart-summary");
+
+      cartItemsContainer.innerHTML = "";
+      summary.innerHTML = "";
+
+      if (cart.length === 0) {
+        emptyMessage.style.display = "block";
+        return;
+      }
+
+      emptyMessage.style.display = "none";
+      let totalPrice = 0;
+
+      cart.forEach((item, index) => {
+        let row = document.createElement("tr");
+
+        let itemTotal = item.price * item.quantity;
+        totalPrice += itemTotal;
+
+        row.innerHTML = `
+          
+          <td>${item.name}</td>
+          <td>Ksh ${item.price}</td>
+          <td><input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+          <td>Ksh ${itemTotal}</td>
+          <td><button class="remove-btn" onclick="removeItem(${index})">Remove</button></td>
+        `;
+
+        cartItemsContainer.appendChild(row);
+      });
+
+      summary.innerHTML = "Total: Ksh " + totalPrice;
+    }
+
+    function updateQuantity(index, newQuantity) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart[index].quantity = parseInt(newQuantity);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+    window.onload = loadCart;
+
+  </script>
+
+</body>
+</html>

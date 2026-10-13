@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Successful - Jumia Style</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .success-icon {
+      font-size: 80px;
+      color: #ff9900; /* Jumia orange */
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-shop {
+      background: #ff9900;
+      color: white;
+    }
+    .btn-shop:hover {
+      background: #e68a00;
+    }
+
+    .btn-purchases {
+      background: #333;
+      color: white;
+    }
+    .btn-purchases:hover {
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-icon">✔</div>
+    <h1>Order Successful!</h1>
+    <p>Thank you for shopping with us. Your order has been placed successfully.</p>
+    <a href="index.html" class="btn btn-shop">Continue Shopping</a>
+    
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let purchases = JSON.parse(localStorage.getItem("purchases")) || [];
+      console.log("Your Purchases:", purchases); // just for testing
+    });
+  </script>
+</body>
+</html>
+

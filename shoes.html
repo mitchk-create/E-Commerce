@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes| VibeMart</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+ <div class="nav-container">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">VIBEMART</div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden by default) -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bags.html">Bags</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="accessories.html">Accessories</a>
+  </nav>
+     
+  <a href="cart.html"><button id="open-cart" class="cart-btn">
+      🛒 Cart <span id="cart-count">0</span></button></a>
+   
+    <a href="login.html"><button class="login-btn">Login</button></a>
+    <a href="register.html"><button class="register-btn">Register</button></a>
+  </div>
+</div>
+</header>
+   <!-- Hero Banner -->
+  <section class="category-hero">
+    <h1>Shoes Collection</h1>
+    <p>Discover the latest trends </p>
+  </section>
+  <!-- Filter controls -->
+  <div class="filter-controls">
+<input type="text" id="searchInput" placeholder="Search...">
+<select id="sortSelect">
+  <option value="">Sort by</option>
+  <option value="low-high">Price: Low to High</option>
+  <option value="high-low">Price: High to Low</option>
+</select>
+<select id="priceFilter">
+  <option value="">All Prices</option>
+  <option value="0-1000">Ksh 0 - 1000</option>
+  <option value="1000-2500">Ksh 1000 - 2500</option>
+  <option value="2500-5000">Ksh 2500 - 5000</option>
+  <option value="5000-7500">Ksh 5000 - 7500</option>
+  <option value="7500-10000">Ksh 7500 - 10000</option>
+  <option value="10000">Ksh 10000+</option>
+</select>
+</div>
+  <!-- Product Grid -->
+  <section class="category-products">
+    <div class="product-card"data-price="4200" data-name="Men's Leather Loafers">
+      <img src="https://media.istockphoto.com/id/1481397328/photo/mens-leather-moccasins-on-a-white-background.jpg?s=612x612&w=0&k=20&c=wF57aZRoujaBhlPncIFXzIEQIWaUJrQmKZIic2CBYOo=" alt="Product 1">
+      <h3>Men's Leather Loafers</h3>
+      <p>Ksh 4200</p>
+     <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+  <button 
+  class="add-to-cart"
+  data-name="Men's Leather Loafers"
+  data-price="4200" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card"data-price="3500" data-name="Women's Heels">
+      <img src="https://img.freepik.com/premium-photo/red-high-heel-women-shoes-white-background-red-shoe-women-beauty-fashion-concept_293990-4813.jpg" alt="Product 2">
+      <h3>Women's Heels(Red)</h3>
+      <p>Ksh 3500</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Women's Heels"
+  data-price="3500" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card"data-price="3800" data-name="Running Shoes">
+      <img src="https://t3.ftcdn.net/jpg/00/82/88/66/360_F_82886619_a4xje5obM5bAajAjnx6ZzWb0Is70kSQA.jpg" alt="Product 3">
+      <h3>Running Shoes</h3>
+      <p>Ksh 3800</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Running Shoes"
+  data-price="3800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="5000" data-name="Chelsea Boots">
+      <img src="https://media.istockphoto.com/id/1191174265/photo/men-fashion-leather-chelsea-boot-isolated-on-a-white-background-side-view.jpg?s=612x612&w=0&k=20&c=Appe57P7nB3_6YYw5uzY96C-9-R5AcPHF_aM_HbUw4w=" alt="Product 3">
+      <h3>Chelsea Boots</h3>
+      <p>Ksh 5000</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Chelsea Boots"
+  data-price="5000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="2200" data-name="Women's Ballet Flats">
+      <img src="https://niceandaffordable.com/wp-content/uploads/2024/08/side-hn.jpg" alt="Product 3">
+      <h3>Women's Ballets Flats</h3>
+      <p>Ksh 2200</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+   <button 
+  class="add-to-cart"
+  data-name="Women's Ballet Flats"
+  data-price="2200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="5500" data-name="Oxford Shoes">
+      <img src="https://img.freepik.com/premium-photo/pair-stylish-new-shoes-white-background-top-view_1120563-2084.jpg " alt="Product 3">
+      <h3>Men's Oxford Shoes</h3>
+      <p>Ksh 5500</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Oxford Shoes"
+  data-price="5500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="3000" data-name="Women's Wedges">
+      <img src="https://momymall.com/cdn/shop/products/boho-beach-hut-women-s-footwear-black-5-peep-toe-wedges-4-colors-2103285088304_1080x.jpg?v=1685815022" alt="Product 3">
+      <h3>Women's Wedges</h3>
+      <p>Ksh 3000</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Women's Wedges"
+  data-price="3000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="3600" data-name="Sport Sneakers">
+      <img src="https://thumbs.dreamstime.com/b/sport-shoes-isolated-white-background-running-training-116201104.jpg" alt="Product 3">
+      <h3>Sports Sneakers(Unisex)</h3>
+      <p>Ksh 3600</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Sport Sneakers"
+  data-price="3600" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="6000" data-name="Hiking Boots">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnZkaQGhSq6KClPCik4V48jyRMFYW7mtaVTd-Ov1eUvwcceC_JQLtoy04DJ2I-4DpgBSw&usqp=CAU" alt="Product 3">
+      <h3>Hiking Boots</h3>
+      <p>Ksh 6000</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Hiking Boots"
+  data-price="6000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="2500" data-name="Slip-On Canvas">
+      <img src="https://www.shutterstock.com/image-photo/black-slipon-canvas-shoes-on-600nw-2556083031.jpg" alt="Product 3">
+      <h3>Slip-On Canvas</h3>
+      <p>Ksh 2500</p>
+     <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Slip-On Canvas"
+  data-price="2500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="1800" data-name="Sandals">
+      <img src="https://static.vecteezy.com/system/resources/previews/002/950/243/large_2x/men-s-leather-sandals-isolated-on-white-background-free-photo.jpg" alt="Product 3">
+      <h3>Men's Sandals</h3>
+      <p>Ksh 1800</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Sandals"
+  data-price="1800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="2400" data-name="Gladiator Sandals">
+      <img src="https://i.etsystatic.com/12751469/r/il/b84979/2990509501/il_570xN.2990509501_o1md.jpg" alt="Product 3">
+      <h3>Women's Gladiator Sandals</h3>
+      <p>Ksh 2400</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Gladiator Sandals"
+  data-price="2400" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="3200" data-name="Formal Heels">
+      <img src="https://static.vecteezy.com/system/resources/previews/022/069/148/large_2x/closeup-fashion-high-heels-women-shoes-beige-color-isolated-on-white-background-top-view-stiletto-shoe-style-in-ladies-wardrobe-high-fashion-and-formal-female-accessory-copy-space-selective-focus-free-photo.jpg" alt="Product 3">
+      <h3>Formal Heels</h3>
+      <p>Ksh 3200</p>
+     <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+   <button 
+  class="add-to-cart"
+  data-name="Formal Heels"
+  data-price="3200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="4800" data-name="Suede Desert Boots">
+      <img src="https://tsonga.com/cdn/shop/files/TMAS004-VAR-18_Taupe_Suede_1_webp.webp?v=1754559238" alt="Product 3">
+      <h3>Suede Desert Boots</h3>
+      <p>Ksh 4800</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Suede Desert Boots"
+  data-price="4800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="2000" data-name="Kid's Sneakers">
+      <img src="https://img.freepik.com/premium-photo/children-s-running-shoes-blue-with-white-stripes-sports-shoes-white-background_400928-1663.jpg" alt="Product 3">
+      <h3>Kid's Sneakers</h3>
+      <p>Ksh 2000</p>
+     <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+<button 
+  class="add-to-cart"
+  data-name="Kid's Sneakers"
+  data-price="2000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="5200" data-name="Dress Boots">
+      <img src="https://owp.klarna.com/product/232x232/3022178573/Men-s-Richmond-Dress-Chelsea-Boots-Brandy-Brandy.jpg?ph=true" alt="Product 3">
+      <h3>Men's Dress Boots</h3>
+      <p>Ksh 5200</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+   <button 
+  class="add-to-cart"
+  data-name="Dress Boots"
+  data-price="5200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="4500" data-name="Women's Ankle Boots">
+      <img src="https://hollandscountryclothing.co.uk/cdn/shop/files/hunter-womens-ness-ankle-boots-brown_7.jpg?v=1745987475" alt="Product 3">
+      <h3>Women's Ankle Boots</h3>
+      <p>Ksh 4500</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+   <button 
+  class="add-to-cart"
+  data-name="Women's Ankle Boots"
+  data-price="4500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="900" data-name="Slippers">
+      <img src="https://m.media-amazon.com/images/I/61BalkHlB7L._UY900_.jpg" alt="Product 3">
+      <h3>Slippers(Indoor)</h3>
+      <p>Ksh 900</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Slippers"
+  data-price="900" 
+>
+  Add to Cart
+</button>
+  </div>
+    <div class="product-card"data-price="2300" data-name="Crocs">
+      <img src="https://i.ebayimg.com/images/g/Np0AAOSwxkBgovSF/s-l1200.jpg" alt="Product 3">
+      <h3>Crocs</h3>
+      <p>Ksh 2300</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Crocs"
+  data-price="2300" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="1500" data-name="Leather Flip Flops">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuwZ6duAr0lkMlqhAS5UlyTA_t9B7yZ1Akvg&s" alt="Product 3">
+      <h3>Leather Flip Flops </h3>
+      <p>Ksh 1500</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+    <button 
+  class="add-to-cart"
+  data-name="Leather Flip Flops"
+  data-price="1500" 
+>
+  Add to Cart
+</button>
+    </div>
+  </section>
+   <footer>
+  <p>&copy; 2025 VibeMart. All rights reserved.</p>
+</footer>
+  <script src="script.js"></script>
+  
+</body>
+</html>

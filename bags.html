@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bags| VibeMart</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+ <div class="nav-container">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">VIBEMART</div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden by default) -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bags.html">Bags</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="accessories.html">Accessories</a>
+  </nav>
+     
+  <a href="cart.html"><button id="open-cart" class="cart-btn">
+      🛒 Cart <span id="cart-count">0</span></button></a>
+   
+    <a href="login.html"><button class="login-btn">Login</button></a>
+    <a href="register.html"><button class="register-btn">Register</button></a>
+  </div>
+</div>
+</header>
+  
+
+   <!-- Hero Banner -->
+  <section class="category-hero">
+    <h1>Bags Collection</h1>
+    <p>Discover the latest trends</p>
+  </section>
+ <!-- Filter controls -->
+ <div class="filter-controls">
+<input type="text" id="searchInput" placeholder="Search...">
+<select id="sortSelect">
+  <option value="">Sort by</option>
+  <option value="low-high">Price: Low to High</option>
+  <option value="high-low">Price: High to Low</option>
+</select>
+<select id="priceFilter">
+  <option value="">All Prices</option>
+  <option value="0-1000">Ksh 0 - 1000</option>
+  <option value="1000-2500">Ksh 1000 - 2500</option>
+  <option value="2500-5000">Ksh 2500 - 5000</option>
+  <option value="5000-7500">Ksh 5000 - 7500</option>
+  <option value="7500-10000">Ksh 7500 - 10000</option>
+  <option value="10000">Ksh 10000+</option>
+</select>
+</div>
+
+  <!-- Product Grid -->
+  <section class="category-products">
+    <div class="product-card" data-price="3500" data-name="Women's Tote Bag">
+      <img src="https://sfycdn.speedsize.com/fbaf6506-81e1-43a2-bcc1-80e18c7b0146/uk.representclo.com/cdn/shop/files/2Vz_A8dE-JrlkNYrrnyJZcKEqhhXuQvKDoCeMWaikLM.jpg?v=1702310339&width=2000" alt="Product 1">
+      <h3>Women's Tote Bag</h3>
+      <p>Ksh 3500</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </a>
+    <div class="product-card" data-price="4200" data-name="Leather Bagpack">
+      <img src="https://boconi.com/cdn/shop/products/cognac_front.jpg?v=1710510583" alt="Product 2">
+      <h3>Leather Backpack</h3>
+      <p>Ksh 4200</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </a>
+
+    <div class="product-card" data-price="2800" data-name="CrossBody Bag">
+      <img src="https://media.istockphoto.com/id/1456154703/photo/female-black-leather-modern-handbag.jpg?s=612x612&w=0&k=20&c=E2LdPsCnmBJarmhJ6BfQUeZGlHrR98YUEbWXPH34D-I=" alt="Product 3">
+      <h3>CrossBody Bag</h3>
+      <p>Ksh 2800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="3900" data-name="Laptop Bag">
+      <img src="https://img.pikbest.com/wp/202347/laptop-bag-3d-illustration-of-a-white-background-isolated-black_9762287.jpg!bw700" alt="Product 3">
+      <h3>Laptop Bag</h3>
+      <p>Ksh 3900</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card" data-price="2000" data-name="Women's Clutch">
+      <img src="https://media.istockphoto.com/id/1646409298/photo/womens-handbag-on-a-white-background.jpg?s=612x612&w=0&k=20&c=y4Zio0yxDWxx6vF7l7bkLJAddv3KJHCEV75FuVmLlQw=" alt="Product 3">
+      <h3>Women's Clutch</h3>
+      <p>Ksh 2000</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="3200" data-name="Duffel Gym Bag">
+      <img src="https://www.dhresource.com/webp/m/0x0/f2/albu/g17/M00/B0/43/rBVa4WAU-2iAPSeqAABgwNMYLVQ046.jpg" alt="Product 3">
+      <h3>Duffel Gym Bag</h3>
+      <p>Ksh 3200</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card" data-price="3800" data-name="Men's Messenger Bag">
+      <img src="https://buffalojackson.com/cdn/shop/files/Roosvelt-buffalo-leather-satchel-messenger-bag-autumn-brown-2_400x.jpg?v=1755116076" alt="Product 3">
+      <h3>Men's Messenger Bag</h3>
+      <p>Ksh 3800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="2500" data-name="Sling Bag">
+      <img src="https://m.media-amazon.com/images/I/61TL0zp2OKL._UY900_.jpg" alt="Product 3">
+      <h3>Sling Bag</h3>
+      <p>Ksh 2500</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="6500" data-name="Travel Suitcase">
+      <img src="https://media.istockphoto.com/id/1400155110/photo/red-suitcase-flying-on-white-background.jpg?s=612x612&w=0&k=20&c=Crko5wWuAL-kY0A1iJH62Yg_KKWwFg5nCRg7ENveZN0=" alt="Product 3">
+      <h3>Travel Suitcase(Medium)</h3>
+      <p>Ksh 6500</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="3200" data-name="Shoulder Bag">
+      <img src="https://media.istockphoto.com/id/1302787124/photo/beige-leather-women-handbag-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=fOO0zCBqF3rbiGLLHwgtOMHxt66adpKikE7Fs2C_fDs=" alt="Product 3">
+      <h3>Shoulder Bag</h3>
+      <p>Ksh 3200</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="2700" data-name="Mini Backpack">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMp52DL1TNX7za1KH9QD5uUPZJwvNChyHbjloZF7CNrhnXv0Kh-JgBuCTJZ_WR2nPrgg&usqp=CAU" alt="Product 3">
+      <h3>Mini Backpack</h3>
+      <p>Ksh 2700</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="3000" data-name="Satchel Bag">
+      <img src="https://media.istockphoto.com/id/1288804687/photo/women-red-leather-bag-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=g4y0zOKtzvcvNbgLChSeFlRjh6YJjocpfRZv8oFvp2A=" alt="Product 3">
+      <h3>Satchel Bag</h3>
+      <p>Ksh 3000</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="4800" data-name="HandBag">
+      <img src="https://sc04.alicdn.com/kf/H64e0ebd3fc114468bf6d46acbb023e79s.jpg" alt="Product 3">
+      <h3>Handbag (Leather)</h3>
+      <p>Ksh 4800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="1800" data-name="Kid's School Bag">
+      <img src="https://media.istockphoto.com/id/156726295/photo/a-bright-yellow-backpack-with-white-backpack.jpg?s=612x612&w=0&k=20&c=YvRc-CN4l3kltwM-r1T-tP1Fr6_39nkivU30AYZSQMM=" alt="Product 3">
+      <h3>Kid's School Bag</h3>
+      <p>Ksh 1800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="3600" data-name="Camera Bag">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-P3o-6FYCnVBa7WTUtRLHkn0M3xJ68h8fA&s" alt="Product 3">
+      <h3>Camera Bag</h3>
+      <p>Ksh 3600</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="1200" data-name="Wallet Purse">
+      <img src="https://media.istockphoto.com/id/182485898/photo/leather-wallet.jpg?s=612x612&w=0&k=20&c=xvIiSedt1lPqFj8d0S54iMqNSE25ROJRVejjJ7Vg-yM=" alt="Product 3">
+      <h3>Wallet Purse</h3>
+      <p>Ksh 1200</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="1500" data-name="Shopping Tote ">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtMZ_kO-Oy0EQ0uuWuhzEK-48F9592tKgLtVUQIpu1faepFq75izZaebKlbIOQTQomuvg&usqp=CAU" alt="Product 3">
+      <h3>Shopping Tote</h3>
+      <p>Ksh 1500</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="5000" data-name="Weekender Bag">
+      <img src="https://tombeckbe.com/cdn/shop/files/TomBeckbeCanvasWeekenderTwoHandleDuffelBag2.jpg?v=1741920710&width=1500" alt="Product 3">
+      <h3>Weekender Bag</h3>
+      <p>Ksh 5000</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="1800" data-name="Belt Bag">
+      <img src="https://m.media-amazon.com/images/I/21+Ysw2tVEL._UY1000_.jpg" alt="Product 3">
+      <h3>Belt Bag(Fanny Pack)</h3>
+      <p>Ksh 1800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card"data-price="5200" data-name="Briefcase">
+      <img src="https://www.shutterstock.com/image-photo/black-leather-briefcase-isolated-on-600nw-324292076.jpg" alt="Product 3">
+      <h3>Briefcase(Men's)</h3>
+      <p>Ksh 5200</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+   <footer>
+  <p>&copy; 2025 VibeMart. All rights reserved.</p>
+</footer>
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitchelle</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+ <div class="nav-container">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">VIBEMART</div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden by default) -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bags.html">Bags</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="accessories.html">Accessories</a>
+  </nav>
+   <a href="cart.html"><button id="open-cart" class="cart-btn">
+      🛒 Cart <span id="cart-count">0</span></button></a>
+   
+    <a href="login.html"><button class="login-btn">Login</button></a>
+    <a href="register.html"><button class="register-btn">Register</button></a>
+  </div>
+</div>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+    <h1>Discover your style with VibeMart</h1>
+    <p>Trendy fashion, shoes, bags, gadgets & more at amazing prices!</p>
+    </div>
+  </section>
+
+  <!-- FLASH SALE SECTION -->
+<section class="flash-sale">
+  <h2>⚡ Flash Sale – Limited Time Only! ⚡</h2>
+  <div class="countdown" id="countdown">
+    <span id="days">00</span>d :
+    <span id="hours">00</span>h :
+    <span id="minutes">00</span>m :
+    <span id="seconds">00</span>s
+  </div>
+
+  <div class="flash-products">
+    <div class="flash-card">
+      <img src="https://m.media-amazon.com/images/I/31YfI3O9S8L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg">
+      <h3>Wireless Earbuds</h3>
+      <p>Now Ksh 1,499 <span class="old-price">Ksh 2,500</span></p>
+        <button class="add-to-cart" data-name="Wireless Earbuds" data-price="2500">Add to Cart</button>
+    </div>
+    <div class="flash-card">
+      <img src="https://www.digitaltrends.com/wp-content/uploads/2024/11/Aukey-Smartwatch-1-Ultra.jpg?resize=1200%2C720&p=1" alt="Flash Deal 2">
+      <h3>Smart Watch</h3>
+      <p>Now Ksh 2,999 <span class="old-price">Ksh 4,000</span></p>
+        <button class="add-to-cart" data-name="Smart Watch" data-price="4000">Add to Cart</button>
+    </div>
+  </div>
+</section>
+  <!-- OFFERS SECTION -->
+<section class="offers">
+  <h2>🔥 Hot Deals & Offers 🔥</h2>
+  <div class="offers-container">
+    <div class="offer-card">
+      <img src="https://thumbs.dreamstime.com/b/beige-cable-knit-sweater-folded-white-background-laying-showcasing-its-warm-comfortable-texture-332973424.jpg">
+      <h3>Woolen Sweater</h3>
+      <p>Up to 50% OFF,now at Ksh1500</p>
+      <p>Available Sizes: S, M, L, XL</p>
+    <select>
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+       <button class="add-to-cart" data-name="Clothes" data-price="1500">Add to Cart</button>
+    </div>
+    <div class="offer-card">
+      <img src="https://i5.walmartimages.com/asr/40ba30ac-89a0-4fd3-ae43-6d79911b1dbb.a09599173940d03ba76e0908b94b3f7f.jpeg" alt="Discount Shoes">
+      <h3>Women sandals</h3>
+      <p>Buy 1 Get 1 Free,at Ksh1800</p>
+      <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+
+        <button class="add-to-cart" data-name="sandals" data-price="1800">Add to Cart</button>
+    </div>
+    <div class="offer-card">
+      <img src="https://m.media-amazon.com/images/I/41qVQyzmLQL._SY1000_.jpg" alt="Discount Gadgets">
+      <h3>Smart watch</h3>
+      <p>Up to 40% OFF,now at Ksh2100</p>
+       <button class="add-to-cart" data-name="Smart Watch" data-price="2100">Add to Cart</button>
+    </div>
+    <div class="offer-card">
+      <img src="https://media.istockphoto.com/id/1363767151/photo/yellow-leather-bag-of-isolated-woman-on-white-background.jpg?s=612x612&w=0&k=20&c=X7PcXbPp99t0xAFbWLV7Yfm3YzsFSugtfEGZ0x2aCjo=" alt="Discount Bags">
+      <h3>Handbag</h3>
+      <p>Flat 30% OFF,now at Ksh2500</p>
+        <button class="add-to-cart" data-name="Bag" data-price="2500">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<!-- New Arrivals Section -->
+<section class="new-arrivals" id="new-arrivals">
+  <h2>✨ New Arrivals ✨</h2>
+  <div class="arrivals-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://editorialist.com/thumbnail/600/2025/6/037/061/274/37061274~red_1750858678774_0.webp?width=600&quality=60" alt="Trendy Sneakers">
+      <h3>Trendy Sneakers</h3>
+      <p class="price">Ksh 4,500</p>
+       <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+        <button class="add-to-cart" data-name="Trendy Sneakers" data-price="4500">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://i.pinimg.com/736x/be/3f/af/be3faf8625db1a1675e23ff8cdc9d1cd.jpg" alt="Leather Handbag">
+      <h3>Leather Handbag</h3>
+      <p class="price">Ksh 3,200</p>
+      <button class="add-to-cart" data-name="Leather Handbag" data-price="3200">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61Cw5knIx0L._UY1000_.jpg" alt="Stylish Jacket">
+      <h3>Stylish Jacket</h3>
+      <p class="price">Ksh 6,000</p>
+       <p>Available Sizes: S, M, L, XL</p>
+    <select>
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+       <button class="add-to-cart" data-name="Stylish Jacket" data-price="6000">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://www.giriasindia.com/_next/image?url=https%3A%2F%2Fbc-storage.sfo2.cdn.digitaloceanspaces.com%2Fgirias%2Fproduct%2F61E-KWTh5GL._SX679_.jpg&w=256&q=50" alt="Smartphone Pro">
+      <h3>Smartphone Pro</h3>
+      <p class="price">Ksh 25,000</p>
+        <button class="add-to-cart" data-name="Smartphone" data-price="25000">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<section class="featured-products" id="featured-products">
+  <h2>✨ Featured Products ✨</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71UBldlrDuL._UY1000_.jpg" alt="Men's Shirt">
+      <h3>Men's Classic Shirt</h3>
+      <p>Ksh 1,500</p>
+       <p>Available Sizes: S, M, L, XL</p>
+    <select>
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+     <button class="add-to-cart" data-name="Shirt" data-price="1500">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxZD02dWUEAwFiQ5ed6HJTAdumdGmsQf_mKfMBwk6ij6lwv4O4otOBv2DDLQbHw3qBeLI&usqp=CAU" alt="Women's Shoes">
+      <h3>Women's Sneakers</h3>
+      <p>Ksh 2,800</p>
+       <p>Available Sizes: 39, 40, 41, 42</p>
+    <select>
+      <option>39</option><option>40</option><option>41</option><option>42</option>
+    </select>
+      <button class="add-to-cart" data-name="Sneakers" data-price="2800">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://shopaholics.co/cdn/shop/products/BULLCAPTAIN-2018-MEN-S-FAMOUS-BRAND-casual-CROSSBODY-BAGS-MALE-BAG-FASHION-GENUINE-LEATHER-MINI-SHOULDER.jpg_640x640_effb5e8b-31d9-4dfc-b142-408facb40cbc_400x.jpg?v=1606666548" alt="Leather Bag">
+      <h3>Leather Bag</h3>
+      <p>Ksh 3,200</p>
+     <button class="add-to-cart" data-name="Bag" data-price="3200">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg" alt="Wireless Headphones">
+      <h3>Wireless Headphones</h3>
+      <p>Ksh 4,500</p>
+     <button class="add-to-cart" data-name="Headphones" data-price="4500">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/31XZZQLpGvL._SR600,315_PIWhiteStrip,BottomLeft,0,35_SCLZZZZZZZ_FMpng_BG255,255,255.jpg" alt="Wireless Headphones">
+      <h3>Women's Handbag</h3>
+      <p>Ksh 5,500</p>
+      <button class="add-to-cart" data-name="Handbag" data-price="5500">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANSu7SfMrdzj1VRApQhrA5DKK_fmpm3_SoyXlKVUSymMC9fYbsixFz4ImUreSsUnrnVY&usqp=CAU" alt="Wireless Headphones">
+      <h3>Powerbank</h3>
+      <p>Ksh 3,000</p>
+      <button class="add-to-cart" data-name="Powerbank" data-price="3000">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<!-- WHY SHOP WITH US -->
+<section class="why-shop">
+  <h2>Why Shop With Us?</h2>
+  <div class="reasons">
+    <div class="reason">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>Fast Delivery</h3>
+      <p>Get your items delivered to your doorstep quickly and safely.</p>
+    </div>
+    <div class="reason">
+      <i class="fas fa-lock"></i>
+      <h3>Secure Payments</h3>
+      <p>All transactions are safe with end-to-end encryption.</p>
+    </div>
+    <div class="reason">
+      <i class="fas fa-sync-alt"></i>
+      <h3>Easy Returns</h3>
+      <p>Hassle-free returns and exchanges within 7 days.</p>
+    </div>
+    <div class="reason">
+      <i class="fas fa-tags"></i>
+      <h3>Best Prices</h3>
+      <p>Affordable prices with amazing discounts every day.</p>
+    </div>
+  </div>
+</section>
+<!-- NEWSLETTER SIGNUP -->
+<section class="newsletter">
+  <h2>Stay Updated!</h2>
+  <p>Subscribe to get the latest deals, new arrivals, and exclusive offers.</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+  <footer>
+  <p>&copy; 2025 VibeMart. All rights reserved.</p>
+</footer>
+ 
+<script src="script.js"></script>
+ <script src="cart.js"></script>
+</body>
+</html>

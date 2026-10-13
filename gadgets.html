@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadgets| VibeMart</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+ <div class="nav-container">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">VIBEMART</div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden by default) -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bags.html">Bags</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="accessories.html">Accessories</a>
+  </nav>
+     
+  <a href="cart.html"><button id="open-cart" class="cart-btn">
+      🛒 Cart <span id="cart-count">0</span></button></a>
+   
+    <a href="login.html"><button class="login-btn">Login</button></a>
+    <a href="register.html"><button class="register-btn">Register</button></a>
+  </div>
+</div>
+</header>
+
+   <!-- Hero Banner -->
+  <section class="category-hero">
+    <h1>Gadgets Collection</h1>
+    <p>Discover the latest trends</p>
+  </section>
+  <!-- Filter controls -->
+  <div class="filter-controls">
+<input type="text" id="searchInput" placeholder="Search...">
+<select id="sortSelect">
+  <option value="">Sort by</option>
+  <option value="low-high">Price: Low to High</option>
+  <option value="high-low">Price: High to Low</option>
+</select>
+<select id="priceFilter">
+  <option value="">All Prices</option>
+  <option value="0-1000">Ksh 0 - 1000</option>
+  <option value="1000-2500">Ksh 1000 - 2500</option>
+  <option value="2500-5000">Ksh 2500 - 5000</option>
+  <option value="5000-7500">Ksh 5000 - 7500</option>
+  <option value="7500-10000">Ksh 7500 - 10000</option>
+  <option value="10000">Ksh 10000+</option>
+</select>
+</div>
+
+  <!-- Product Grid -->
+  <section class="category-products">
+    <div class="product-card" data-price="18000" data-name="Smartphone">
+      <img src="https://c4.wallpaperflare.com/wallpaper/659/385/190/white-smartphone-thin-galaxy-s5-wallpaper-preview.jpg" alt="Product 1">
+      <h3>Smartphone(Samsung)</h3>
+      <p>Ksh 18000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Smartphone"
+  data-price="18000" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card" data-price="8500" data-name="Smartwatch">
+      <img src="https://thumbs.dreamstime.com/b/smart-watch-simple-design-icons-isolated-white-background-51185264.jpg" alt="Product 2">
+      <h3>Smartwatch</h3>
+      <p>Ksh 8500</p>
+     <button 
+  class="add-to-cart"
+  data-name="Smartwatch"
+  data-price="8500" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card" data-price="4000" data-name="Wireless Earbuds">
+      <img src="https://m.media-amazon.com/images/I/7166+XlltXL._UF894,1000_QL80_.jpg" alt="Product 3">
+      <h3>Wireless Earbuds</h3>
+      <p>Ksh 4000</p>
+     <button 
+  class="add-to-cart"
+  data-name="Wireless Earbuds"
+  data-price="4000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="55000" data-name="Laptop">
+      <img src="https://t4.ftcdn.net/jpg/02/22/75/47/360_F_222754719_paLfGKLvoDdHnskkMU8ZZ7vsQZNd3M2i.jpg" alt="Product 3">
+      <h3>Laptop(Core i5)</h3>
+      <p>Ksh 55000</p>
+     <button 
+  class="add-to-cart"
+  data-name="Laptop"
+  data-price="55000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="3800" data-name="Bluetooth Speaker">
+      <img src="https://5.imimg.com/data5/TestImages/FD/SK/VO/SELLER-42219103/4.jpeg" alt="Product 3">
+      <h3>Bluetooth Speaker</h3>
+      <p>Ksh 3800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Bluetooth Speaker"
+  data-price="3800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2800" data-name="PowerBank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN35aPLnIK0qc9QZFH3Gt2qWJdnnEbEH_uFw&s" alt="Product 3">
+      <h3>Power Bank(10000mAh)</h3>
+      <p>Ksh 2800</p>
+      <button 
+  class="add-to-cart"
+  data-name="PowerBank"
+  data-price="2800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="60000" data-name="DSLR Camera">
+      <img src="https://media.istockphoto.com/id/174455805/photo/dslr-camera-with-mounted-50mm-f1-4-lens-on-white-background.jpg?s=612x612&w=0&k=20&c=m2ucRgcCP-P3d8dWj9oEkW8FhuAvgD88n0x7C00g0rI=" alt="Product 3">
+      <h3>DSLR Camera</h3>
+      <p>Ksh 60000</p>
+      <button 
+  class="add-to-cart"
+  data-name="DSLR Camera"
+  data-price="60000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card"data-price="28000" data-name="Portable Tablet">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tZ_r-jiFSvoKZuE9mQSvK-VI0dfylgJCOAorCCOmrsUlMC4NxS1PIbmHGvdbDk0249U&usqp=CAU" alt="Product 3">
+      <h3>Portable Tablet</h3>
+      <p>Ksh 28000</p>
+     <button 
+  class="add-to-cart"
+  data-name="Portable Tablet"
+  data-price="28000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="5500" data-name="Gaming Headset">
+      <img src="https://techlandbd.com/storage/cbs/uploads/products/P2092506087/cover.jpg" alt="Product 3">
+      <h3>Gaming Headset</h3>
+      <p>Ksh 5500</p>
+     <button 
+  class="add-to-cart"
+  data-name="Gaming Headset"
+  data-price="5500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1200" data-name="Wireless Mouse">
+      <img src="https://phoneparts.co.uk/wp-content/uploads/2024/02/NG6043-red-800x800-1-600x600.jpg" alt="Product 3">
+      <h3>Wireless Mouse</h3>
+      <p>Ksh 1200</p>
+      <button 
+  class="add-to-cart"
+  data-name="Wireless Mouse"
+  data-price="1200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="4500" data-name="Mechanical Keyboard">
+      <img src="https://img.freepik.com/premium-photo/gaming-keyboard-with-backlight-isolated-white-background_666369-5.jpg" alt="Product 3">
+      <h3>Mechanical Keyboard</h3>
+      <p>Ksh 4500</p>
+      <button 
+  class="add-to-cart"
+  data-name="Mechanical Keyboard"
+  data-price="4500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="15000" data-name="Action Camera">
+      <img src="https://img.lovepik.com/bg/20240331/Stunning-3D-Render-of-Compact-Ultra-HD-Action-Camera-on_5598559_wh860.jpg!/fw/860" alt="Product 3">
+      <h3>Action Camera</h3>
+      <p>Ksh 15000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Action Camera"
+  data-price="15000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="12000" data-name="Portable Projector">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvedieyYUmDriRimBPiecsDD137ntJ2Wxp1A&s" alt="Product 3">
+      <h3>Portable Projector</h3>
+      <p>Ksh 12000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Portable Projector"
+  data-price="12000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="28000" data-name="VR Headset">
+      <img src="https://png.pngtree.com/background/20230522/original/pngtree-white-and-black-vr-headset-with-a-handle-picture-image_2691388.jpg" alt="Product 3">
+      <h3>VR Headset</h3>
+      <p>Ksh 28000</p>
+      <button 
+  class="add-to-cart"
+  data-name="VR Headset"
+  data-price="28000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="4800" data-name="Fitness Tracker Band">
+      <img src="https://img.freepik.com/premium-photo/good-looking-smart-real-photo-fitness-tracker-band-isolated-white-background_94628-24462.jpg" alt="Product 3">
+      <h3>Fitness Tracker Band</h3>
+      <p>Ksh 4800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Fitness Tracker Band"
+  data-price="4800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1000" data-name="Car Charger">
+      <img src="https://m.media-amazon.com/images/I/51LAPJBQ+6L._UF1000,1000_QL80_.jpg" alt="Product 3">
+      <h3>Car Charger(USB)</h3>
+      <p>Ksh 1000</p>
+     <button 
+  class="add-to-cart"
+  data-name="Car Charger"
+  data-price="1000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="9800" data-name="Smart Home Speaker">
+      <img src="https://thumbs.dreamstime.com/b/cylindrical-smart-speaker-fabric-exterior-device-features-grey-body-blue-led-ring-near-top-there-small-376383650.jpg" alt="Product 3">
+      <h3>Smart Home Speaker</h3>
+      <p>Ksh 9800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Smart Home Speaker"
+  data-price="9800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="7800" data-name="External Hard Drive">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoa1y8B36g1GIzyk5MLxwTbhaaBndTIG4Pgw&s" alt="Product 3">
+      <h3>External Hard Drive(1TB)</h3>
+      <p>Ksh 7800</p>
+      <button 
+  class="add-to-cart"
+  data-name="External Hard Drive"
+  data-price="7800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="3000" data-name="Wireless Charging Pad">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdrUMsbQyZXWUSWKWPiQbVnpCDm4vYNvt-Tg&s" alt="Product 3">
+      <h3>Wireless Charging Pad</h3>
+      <p>Ksh 3000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Wireless Charging Pad"
+  data-price="3000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="14000" data-name="E-Reader">
+      <img src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/26/1351264383004/Paperwhite-side-007.jpg?width=445&dpr=1&s=none&crop=none" alt="Product 3">
+      <h3>E-Reader</h3>
+      <p>Ksh 14000</p>
+      <button 
+  class="add-to-cart"
+  data-name="E-Reader"
+  data-price="14000" 
+>
+  Add to Cart
+</button>
+    </div>
+  </section>
+   <footer>
+  <p>&copy; 2025 VibeMart. All rights reserved.</p>
+</footer>
+  <script src="script.js"></script>
+  
+</body>
+</html>

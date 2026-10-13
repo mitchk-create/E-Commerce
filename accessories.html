@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories | VibeMart</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+ <div class="nav-container">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">VIBEMART</div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden by default) -->
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bags.html">Bags</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="accessories.html">Accessories</a>
+  </nav>
+     
+  <a href="cart.html"><button id="open-cart" class="cart-btn">
+      🛒 Cart <span id="cart-count">0</span></button></a>
+   
+    <a href="login.html"><button class="login-btn">Login</button></a>
+    <a href="register.html"><button class="register-btn">Register</button></a>
+  </div>
+</div>
+</header>
+
+   <!-- Hero Banner -->
+  <section class="category-hero">
+    <h1>Accessories Collection</h1>
+    <p>Discover the latest trends in accessories</p>
+  </section>
+  <!-- Filter controls -->
+  <div class="filter-controls">
+<input type="text" id="searchInput" placeholder="Search...">
+<select id="sortSelect">
+  <option value="">Sort by</option>
+  <option value="low-high">Price: Low to High</option>
+  <option value="high-low">Price: High to Low</option>
+</select>
+<select id="priceFilter">
+  <option value="">All Prices</option>
+  <option value="0-1000">Ksh 0 - 1000</option>
+  <option value="1000-2500">Ksh 1000 - 2500</option>
+  <option value="2500-5000">Ksh 2500 - 5000</option>
+  <option value="5000-7500">Ksh 5000 - 7500</option>
+  <option value="7500-10000">Ksh 7500 - 10000</option>
+  <option value="10000">Ksh 10000+</option>
+</select>
+</div>
+
+  <!-- Product Grid -->
+  <section class="category-products">
+    <div class="product-card" data-price="1200" data-name="Leather Belt">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1qJXQLS44WeK1N1-F6xDvXJBI6ZuBR8BKQsbYPVOk-QjFT1Rc74U8k3jCl_RapwqC4QI&usqp=CAU" alt="Product 1">
+      <h3>Men's Leather Belt</h3>
+      <p>Ksh 1200</p>
+     <button 
+  class="add-to-cart"
+  data-name="Leather Belt"
+  data-price="1200" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card" data-price="2500" data-name="Earrings">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjimBZYVs9JKcfEDinLJy5uT3mJoO4jb4_Q&s" alt="Product 2">
+      <h3>Women's Earrings(Gold Plated)</h3>
+      <p>Ksh 2500</p>
+      <button 
+  class="add-to-cart"
+  data-name="Earrings"
+  data-price="2500" 
+>
+  Add to Cart
+</button>
+    </div>
+
+    <div class="product-card" data-price="4800" data-name="Wrist Watch">
+      <img src="https://media.istockphoto.com/id/1180244659/photo/luxury-watch-isolated-on-white-background-with-clipping-path-for-artwork-or-design-black.jpg?s=612x612&w=0&k=20&c=yeFNfkQmcVV9BTUlZO8vY_oLOQgDAt23LfCbF1e3fbI=" alt="Product 3">
+      <h3>Men's Wrist Watch</h3>
+      <p>Ksh 4800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Wrist Watch"
+  data-price="4800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="3200" data-name="Necklace">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73yoBV9iVfJnESEWMQVYll26po1SUzuj7IoV1CqGYKzhPj2_-UahOqIK6F8UIl7LpO-0&usqp=CAU" alt="Product 3">
+      <h3>Women's Necklace</h3>
+      <p>Ksh 3200</p>
+      <button 
+  class="add-to-cart"
+  data-name="Necklace"
+  data-price="3200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2000" data-name="Sunglasses">
+      <img src="https://wholesale.com.np/wholesale_adityaraj_group/public/img/product/5781e1b756ddd_RayBan%20Blue%20Lens%20Sunglass.jpg" alt="Product 3">
+      <h3>Sunglasses(Aviator)</h3>
+      <p>Ksh 2000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Sunglasses"
+  data-price="2000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="800" data-name="Bracelet">
+      <img src="https://m.media-amazon.com/images/I/71g0cDiHOlL._AC_SY625_.jpg" alt="Product 3">
+      <h3>Beaded Bracelet</h3>
+      <p>Ksh 800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Beaded  Bracelet"
+  data-price="800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1200" data-name="Tie">
+      <img src="https://st.depositphotos.com/1040728/1264/i/450/depositphotos_12640444-stock-photo-red-tie-taken-off.jpg" alt="Product 3">
+      <h3>Men's Tie</h3>
+      <p>Ksh 1200</p>
+      <button 
+  class="add-to-cart"
+  data-name="Tie"
+  data-price="1200" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1800" data-name="Scarf">
+      <img src="https://media.istockphoto.com/id/621861750/photo/silk-scarf-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=z22VMdcLDSvMK93gHBkY-4dn3wKojp3XHpfVNKbcG_Q=" alt="Product 3">
+      <h3>Woman's Scarf</h3>
+      <p>Ksh 1800</p>
+     <button 
+  class="add-to-cart"
+  data-name="Scarf"
+  data-price="1800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1800" data-name="Cap">
+      <img src="https://media.istockphoto.com/id/497600473/photo/black-baseball-hat.jpg?s=612x612&w=0&k=20&c=eqNaP-Lfj_3PIxyw8uZONkHvSpzxN2M_hFnuSghMn00=" alt="Product 3">
+      <h3>Cap(Baseball)</h3>
+      <p>Ksh 1800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Cap"
+  data-price="1800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="600" data-name="Hair Band">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5xl_7E31NAbosh3ir5YgCkq-Z-pZ2c_P_8w&s" alt="Product 3">
+      <h3>Hair Band(Set of 3)</h3>
+      <p>Ksh 600</p>
+      <button 
+  class="add-to-cart"
+  data-name="Hair Band"
+  data-price="600" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1500" data-name="Wallet">
+      <img src="https://media.istockphoto.com/id/509244022/photo/mens-leather-wallet-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=3ckmFEDApJoOi9aa1axNNksdML8cB7mqJkNwUOqDX24=" alt="Product 3">
+      <h3>Wallet(Men's)</h3>
+      <p>Ksh 1500</p>
+      <button 
+  class="add-to-cart"
+  data-name="Wen's Wallet"
+  data-price="1500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2300" data-name="Women's Sunglasses">
+      <img src="https://media.istockphoto.com/id/1217598646/photo/orange-cat-eye-sunglasses-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=iNMct0oXIXzWDEcZGH3eQrKcH12oLG_kvXEo0xW-MEg=" alt="Product 3">
+      <h3>Women's Sunglasses(Cat Eye)</h3>
+      <p>Ksh 2300</p>
+      <button 
+  class="add-to-cart"
+  data-name="Women's Sunglasses"
+  data-price="2300" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="3800" data-name="Pearl Necklace">
+      <img src="https://i.ebayimg.com/images/g/zicAAOSwgltgeEVM/s-l400.png" alt="Product 3">
+      <h3>Pearl Necklace</h3>
+      <p>Ksh 3800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Pearl Necklace"
+  data-price="3800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2400" data-name="Leather Gloves">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi5Y_kF3hXtwfTRIPQlx-PUqwqpgYtsYEHmA&s" alt="Product 3">
+      <h3>Leather Gloves</h3>
+      <p>Ksh 2400</p>
+      <button 
+  class="add-to-cart"
+  data-name="Leather Gloves"
+  data-price="2400" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2100" data-name="Ring">
+      <img src="https://m.media-amazon.com/images/I/61bovEVYugL._UY1000_.jpg" alt="Product 3">
+      <h3>Ring(Silver)</h3>
+      <p>Ksh 2100</p>
+     <button 
+  class="add-to-cart"
+  data-name="Ring Silver"
+  data-price="2100" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="800" data-name="Hair Clip Set">
+      <img src="https://media.istockphoto.com/id/1172937702/photo/set-of-trendy-pearl-hair-accessories.jpg?s=612x612&w=0&k=20&c=p4_GPx-OE8rK_xubrgAcqg_JWLle4KEZ2myy765LgGA=" alt="Product 3">
+      <h3>Hair Clip Set</h3>
+      <p>Ksh 800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Hair Clip Set"
+  data-price="800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="2800" data-name="Cufflinks">
+      <img src="https://thumbs.dreamstime.com/b/magnificent-cufflinks-isolated-white-background-highlighting-stylish-accessory-formal-wear-magnificent-cufflinks-isolated-362327121.jpg" alt="Product 3">
+      <h3>Cufflinks</h3>
+      <p>Ksh 2800</p>
+      <button 
+  class="add-to-cart"
+  data-name="Cufflinks"
+  data-price="2800" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1500" data-name="Silver Anklet">
+      <img src="https://i.ebayimg.com/images/g/Q1cAAMXQ5fVQ8JOn/s-l1200.jpg" alt="Product 3">
+      <h3>Silver Anklet</h3>
+      <p>Ksh 1500</p>
+      <button 
+  class="add-to-cart"
+  data-name="Silver Anklet"
+  data-price="1500" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="1000" data-name="Men's Beanie">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5572tY3k6CYR_nko1Ch6uHk3O19aOJ6M6B1oqrw8y4qC83rXpZdYOTxkAmpaFwCYOEo&usqp=CAU" alt="Product 3">
+      <h3>Men's Beanie</h3>
+      <p>Ksh 1000</p>
+      <button 
+  class="add-to-cart"
+  data-name="Men's Beanie"
+  data-price="1000" 
+>
+  Add to Cart
+</button>
+    </div>
+    <div class="product-card" data-price="700" data-name="Ring">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThbw80oTrxf4oxhe12CcTMjYjOsoKUjoF7Mw&s" alt="Product 3">
+      <h3>Ring(Gold)</h3>
+      <p>Ksh 700</p>
+      <button 
+  class="add-to-cart"
+  data-name="Ring Gold"
+  data-price="700" 
+>
+  Add to Cart
+</button>
+    </div>
+  </section>
+   <footer>
+  <p>&copy; 2025 VibeMart. All rights reserved.</p>
+</footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
